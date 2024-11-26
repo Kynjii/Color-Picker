@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+        <title>Color Picker | Dean Burrows</title>
+    </head>
+    <body>
+        <header>
+            <input type="color" class="color-input" id="color-input">
+            <select name="color-scheme" id="color-scheme">
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome Dark</option>
+                <option value="monochrome-light">Monochrome Light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic Complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option>
+            </select>
+            <button class="get-btn" id="get-btn">Get color scheme</button>
+            </header>
+        </header>
+        <main>
+            <div id="color-container"></div>
+        </main>
+        <script src="index.js"></script>       
+    </body>
+</html>
