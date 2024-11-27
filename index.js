@@ -1,12 +1,11 @@
 
 // Get Elements //
-const btnEl = document.getElementById('get-btn')
 const colorInput = document.getElementById('color-input')
 const schemeEl = document.getElementById('color-scheme')
 
 
-//  Function that sends a request to Color API when 'btnEl' is clicked
-btnEl.addEventListener('click', function(){
+// Grabs the input values and creates a URL with parameters to pass in the Fetch
+function handleClick(){
     const baseUrl = "https://www.thecolorapi.com/scheme"
     const hex = colorInput.value.replace('#', '')
     const mode = schemeEl.value
@@ -29,6 +28,7 @@ btnEl.addEventListener('click', function(){
             `
         }  
         document.getElementById('color-container').innerHTML = html              
-    })  
-    
-})
+    }) } 
+
+// Listens for a button click and triggers the 'handleClick' function
+document.getElementById('get-btn').addEventListener('click', handleClick)
