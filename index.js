@@ -1,8 +1,11 @@
+
+// Get Elements //
 const btnEl = document.getElementById('get-btn')
 const colorInput = document.getElementById('color-input')
 const schemeEl = document.getElementById('color-scheme')
 
 
+//  Function that sends a request to Color API when 'btnEl' is clicked
 btnEl.addEventListener('click', function(){
     const baseUrl = "https://www.thecolorapi.com/scheme"
     const hex = colorInput.value.replace('#', '')
@@ -22,14 +25,10 @@ btnEl.addEventListener('click', function(){
         for (let color of colorArr) {
             html += `
                 <img src="${color.image.bare}">
-                <div>${color.hex.clean}</div>
+                <div class="hex">#${color.hex.clean}</div>
             `
         }  
         document.getElementById('color-container').innerHTML = html              
     })  
     
 })
-
-// refactor //
-
-

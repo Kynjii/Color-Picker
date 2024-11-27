@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ==============
+    Layout
+    ============= */
+
+#color-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 25.875rem 2.875rem;
+}
+
+
+/* ==============
+    Main Styles
+    ============= */
+
+body {
+    background-color: #1A1A1A;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+
+main {
+    background-color: #1F2937;
+    height: 34.375em;
+    width: 34.4em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+/* ==============
+    Header Styles
+    ============= */
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 5.625em;
+}
+
+button, select, input {
+    font-family: inherit;
+    height: 2.625rem;
+}
+
+.color-input {
+    appearance: none;
+    width: 3.8125em;
+    padding: 0.01em 0.0625em;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+select {
+    background-color: #1F2937;
+    color: #D5D4D8;
+    width: 19.5rem;
+    border-radius: 6px;
+}
+
+button {
+    font-size: 0.75em;
+    width: 7.6875rem;
+    background-color: #3D4B60;
+    color: #fff;
+    border: 0;
+    border-radius: 0.375em;
+}
+
+/* ==============
+    Color Container Styles
+    ============= */
+
+#color-container {
+    align-items: center;
+    color: #D5D4D8;
+    font-size: 0.75em;
+}
+
+img {
+    grid-row-start: 1;
+    width: 100%;
+    height: 25.875rem;
+    object-fit: fill;
+}
+
+
+/* ==============
+    Media Styles
+    ============= */
+
+@media (max-width: 480px) {
+    html body main {
+        height: 100%;
+        width: 100%;
+    }
+
+    .color-input {
+        width: 3.8125em;
+    }
+    
+    select {
+        width: 12rem;
+    }
+    
+    button {
+        width: 5.6875rem;
+    }
+
+    #color-container {
+        grid-template-rows: 75vh 5vh;
+    }
+
+    img {
+        height: 100%;
+        object-fit: fill;
+    }
+}
